@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+   
+<!--
+    Author:  Simeon Ngalamou [[ Hello World Plus. ]]
+    Course Name: Web and Distributed Programming
+    Project: Programming Assignment 2
+    Semester: Fall 2019
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Course Schedule - Simeon Ngalamou </title>
+        <link rel="stylesheet" href="course-schedule.css">
+        <script src="course-schedule.js"></script>
+
+    </head>
+    <body onload="initApplication()">
+        <div id="container">
+            <h1>Course Schedule - Simeon Ngalamou </h1> 
+            <a href="#bio">Biography</a>
+            <br>
+            <a href="#cor">Course</a>
+            <br>
+            <a href="#sch">Schedule</a>
+            </div>
+            <div id="container1">
+                <div class="section">
+                <h2 id="bio">Biography</h2>
+                
+                <blockquote> <b>About Me:</b> My name is Simeon Ngalamou, I'm 20 years old and a junior (CompSci Major) at Lewis University
+                I speak two languages conversationally - English & Spanish - and im learning another - French. Thats a little about me. 
+                </blockquote>
+                <img src="lacaubam.jpg" alt="My Personality in One Picture">
+                </div>
+
+                <div class="section">
+                <h2 id="cor">Courses</h2>
+                <p><b>My Classes are as follows:</b></p>
+                <ul>
+                    <li>General Psych</li>
+                    <li>Second Year Spanish 1</li>
+                    <li>Second Year French 1</li>
+                    <li>Intro to Philosophy</li>
+                    <li>Object-Orientated Programming</li>
+                    <li>Web and Distributed Programming</li>
+                  </ul>
+                </div>
+
+                <div class="section">
+                <h2 id="sch">Schedule</h2>
+                <p><b>I only have classes MWF. My schedule for those days are as follows:</b></p>
+                <table style="width:100%">
+                    <tr>
+                      <th>Course Name</th>
+                      <th>Day(s)</th> 
+                      <th>Hours</th>
+                    </tr>
+                    <tr>
+                      <td>General Psych</td>
+                      <td>Monday, Wednesday & Friday</td>
+                      <td>9:00 - 9:50 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Second Year Spanish 1</td>
+                      <td>Monday, Wednesday & Friday</td>
+                      <td>10:00 - 10:50 AM</td>
+                    </tr>
+                    <tr>
+                      <td>Second Year French 1</td>
+                      <td>Monday, Wednesday & Friday</td>
+                      <td>11:00 - 11:50 AM</td>
+                    </tr>
+                    <tr>
+                        <td>No Class</td>
+                        <td>Monday, Wednesday & Friday</td>
+                        <td>12:00 - 12:50 PM</td>
+                      </tr>
+                    <tr>
+                        <td>Intro to Philosophy</td>
+                        <td>Monday, Wednesday & Friday</td>
+                        <td>1:00 - 1:50 PM</td>
+                    </tr>
+                      <tr>
+                        <td>Object-Orientated Programming</td>
+                        <td>Monday, Wednesday & Friday</td>
+                        <td>2:00 - 2:50 PM</td>
+                      </tr>
+                      <tr>
+                        <td>Web and Distributed Programming</td>
+                        <td>Monday, Wednesday & Friday/td>
+                        <td>3:00 - 3:50 PM</td>
+                      </tr>
+                  </table>
+                
+
+                </div>
+            </div>
+            <div class="container">
+                    <form action="action_page.php">
+                  
+                      <label for="fname">Name</label>
+                      <input type="text" id="fname" name="fullname" placeholder="Enter Your First and Last Name..">
+                  
+                      <label for="gender">Gender</label>
+                      <select id="gender" name="gender">
+                        <option value="N/A">Select A Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                      </select>
+                  
+                      <label for="feedback">Feedback</label>
+                      <textarea id="feedback" name="feedback" placeholder="Give me your feedback.." style="height:200px"></textarea>
+                  
+                      <input type="submit" value="Submit">
+
+                      <input type="reset" value="Reset">
+                  
+                    </form>
+                  </div>
+                  
+        
+    </body>
+
+</html>
