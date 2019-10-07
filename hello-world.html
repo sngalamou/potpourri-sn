@@ -16,7 +16,7 @@
     Description: This application is my implementation of Map Mania.
 -->
   <head>
-    <title>Map Mania</title>
+    <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <style>
@@ -38,21 +38,10 @@
     <script>
       var map;
       function initMap() {
-      var loc1 = new LatLng(-76.8099, 18.0179);
-        // Map options
-      var options = {
-        zoom:8,
-        center:({loc1})
-      }
-
-      // New map
-      var map = new google.maps.Map(document.getElementById('map'), options);
-      
-        var zoomLevel = Map.getZoom()
-        if (Map.getBounds().contains({lat:45.3306,lng:-91.4918})) {
-        inBounds = true;
-        }
-           
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
