@@ -38,17 +38,16 @@
     <script>
       var map;
       function initMap() {
-      var loc1 = new LatLng(-76.8099, 18.0179);
         // Map options
       var options = {
-        zoom:8,
-        center:{lat:-76.8099,lng:18.0179}
+        zoom:10,
+        center:{lng:-76.8099,lat:18.0179}
       }
 
       // New map
       var map = new google.maps.Map(document.getElementById('map'), options);
         var zoomLevel = Map.getZoom()
-        if (Map.getBounds().contains({{lat:-76.8099,lng:18.0179})) {
+        if (Map.getBounds().contains({lng:76.8099,lat:18.0179})) {
         inBounds = true;
         }
       }
