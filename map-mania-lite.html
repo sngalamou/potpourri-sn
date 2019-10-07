@@ -15,21 +15,46 @@
     Version: 1.5
     Description: This application is my implementation of Map Mania.
 -->
-    <head>
-        <meta charset="UTF-8">
-        <title>Map Mania Lite</title>
-        <script src="map-mania-lite.js"></script>
-        <link rel="stylesheet" href="map-mania-lite.css"> 
-    </head>
-    <body onload="initApplication()">
-        <h1>Renata &amp; Simeon's &quot;Top Ten&quot; Favorite Places to Visit Game</h1>        
-        Hint: <input id="hint-id" type="text" value="" size="120" disabled><br><br>
-        Score: <input id="score-id" type="text" value="" size="2" disabled><br><br>
+  <head>
+    <title>Map Mania</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+      var loc1 = new LatLng(-76.8099, 18.0179);
+        // Map options
+      var options = {
+        zoom:8,
+        center:({loc1})
+      }
 
-        
-        <div id="myMapID"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
-            async defer>
-        </script>
-    </body>
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+      
+        var zoomLevel = Map.getZoom()
+        if (Map.getBounds().contains({lat:45.3306,lng:-91.4918})) {
+        inBounds = true;
+        }
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
+    async defer></script>
+  </body>
 </html>
