@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <!--
@@ -20,30 +21,13 @@
     <meta charset="UTF-8">
     <script src="map-mania.js"></script>
     <link rel="stylesheet" href="map-mania.css"> 
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+
   </head>
   <body onload="initApplication()">
       <h1>Simeon's Favorite Places Game</h1> <button onclick="myWinner()">Win</button> <button onclick="myHint()">Hints</button>  <br>    
       Need A Hint?: <input id="hinter" type="text" value="" size="120" disabled><br><br>
       Your Score: <input id="scoreboard" type="text" value="" size="2" disabled><br><br>
     <div id="map"></div>
-    <script>
-        function myFunction() {
-          myWin();
-        }
-        </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
     async defer></script>
   </body>
