@@ -17,8 +17,9 @@
 -->
   <head>
     <title>Map Mania</title>
-    <meta name="viewport" content="initial-scale=1.0">
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <script src="map-mania.js"></script>
+    <link rel="stylesheet" href="map-mania.css"> 
     <style>
       /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -33,31 +34,16 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="initApplication()">
+      <h1>Simeon's Favorite Places Game</h1> <button onclick="myWinner()">Win</button> <button onclick="myHint()">Hints</button>  <br>    
+      Need A Hint?: <input id="hinter" type="text" value="" size="120" disabled><br><br>
+      Your Score: <input id="scoreboard" type="text" value="" size="2" disabled><br><br>
     <div id="map"></div>
     <script>
-      function LngLat(Lat, Lng) {
-      this.Lat = Lat;
-      this.Lng = Lat;
-      }
-      var loc1 = new LngLat(-76.8099,18.0179);
-
-      var map;
-      function initMap() {
-        // Map options
-      var options = {
-        zoom:10,
-        center:{lng:-76.8099,lat:18.0179}
-      }
-
-      // New map
-      var map = new google.maps.Map(document.getElementById('map'), options);
-        var zoomLevel = Map.getZoom()
-        if (Map.getBounds().contains({lng:76.8099,lat:18.0179})) {
-        inBounds = true;
+        function myFunction() {
+          myWin();
         }
-      }
-    </script>
+        </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCzBv2wzvSaRv0jO2dLYTi2xKlqctFIuKs&callback=initMap"
     async defer></script>
   </body>
