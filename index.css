@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    font-size:  18px;
+    background-color: lightcoral;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgba(226, 52, 52, 0.932);
+    padding: 1em 0;
+}
+a {
+    color: white;
+}
+
+nav {
+    float: right;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+}
+li a {
+    padding: 1em;
+    }
+li {
+    color: white;
+}
+
+
+h1 {
+    margin-top: 2em
+}

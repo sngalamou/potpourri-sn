@@ -28,12 +28,6 @@ function initMap() {
         "zoom": 4
       });
 
-    alert(`Hello All and Welcome To My Map Game! 
-    This game is played and won by finding all my 9 favorite the locations
-    For it to count you must be at zoom level 6 or greater
-    If you need a hint, click the hint button
-    If this is Dr. Pogue Click the "Win" to win
-    `);
     var marker = new google.maps.Marker({position:{"lat":41.837546,"lng":-88.0146821}, "map":gMap});
 
     /* Add a second marking with a custom icon, an Info window, and a listener.
@@ -45,7 +39,8 @@ function initMap() {
         infoWindow.open(gMap, marker);
     }); 
 
-    
+    instructions();
+
     // Note that several message boards suggested using 'idle' instead of 'bounds_changed' because 
     // 'bounds_changed' gets called over and over when the user drags the map.
     google.maps.event.addListener(gMap, 'idle', function() {
@@ -57,25 +52,36 @@ function initMap() {
     SetScore(score);
 }
 
+function instructions() {
+    alert(`Hello All and Welcome To My Map Game! 
+    This game is played and won by finding all my 9 favorite the locations
+    For it to count you must be at zoom level 6 or greater
+    If you need a hint, click the hint button
+    If this is Dr. Pogue Click the "Win" to win
+    `);
+}
+
+// this is the function that allows the hints to be displayed on the main page
 function myHint() {
     SetHint(hinters[e]);
     //document.getElementById("hinter").value = (hinters[e]);
     // alert(hinters[e]);
     e++;
 }
+
+// this is the function that allows you to cheat to the end of the game
 function myWinner() {
     score = 10;
     SetScore(score);
-    alert("Congratualtions on winning the game!")
     for (i = 0; i < favoritePlaces.length; i++) {
         console.log(favoritePlaces[i]);
         AddMarker(favoritePlaces[i]);
         }
+    alert("Congratualtions on winning the game!")
     }
 
 function updateGame() {
     console.log('function UpdateGame()!');
-    //var location = gMap.getBounds().contains();
     var zoomLevel = gMap.getZoom()
     var inBounds = false;
     var a = false; // I used these local variables so that if the same location is scrolled over more than once the score isn't contually updated 
