@@ -2,7 +2,6 @@ function initApplication() {
     console.log('Map Mania - Starting!');
 }
 
-
 var score = 0;
 var i;
 var e = 0;
