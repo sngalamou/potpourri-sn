@@ -2,6 +2,7 @@ function initApplication() {
     console.log('Map Mania - Starting!');
 }
 
+
 var score = 0;
 var i;
 var e = 0;
@@ -22,6 +23,7 @@ var favoritePlaces = [
 var hinters = ["Think Bob marley","Think Soca Music","Think Samuel Eto'o","Think of the Knicks","Think of Pharaohs","Think of Curry and Rhoti","Think of Middle Eastern Royalty","Think of The Northern Lights","Think of How It Is Down Under"]; 
 
 function initMap() {
+
     gMap = new google.maps.Map(document.getElementById('map'), {
         center: {"lat": 18.0179, "lng": -76.8099},
         "zoom": 4
