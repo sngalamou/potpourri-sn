@@ -17,7 +17,7 @@ function initApplication() {
 function loadIndex() {
     // Load the Mustang index file.
     var indexRequest = new XMLHttpRequest();
-    indexRequest.open('GET', 'https://thunderbird-data-sn.azurewebsites.net/kajsfhkshjdk.json');
+    indexRequest.open('GET', 'https://mustang-index.azurewebsites.net/index.json');
     indexRequest.onload = function() {
         console.log("Index JSON:" + indexRequest.responseText);
         document.getElementById("indexID").innerHTML = indexRequest.responseText;
