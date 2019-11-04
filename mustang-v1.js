@@ -73,6 +73,10 @@ function logContacts() {
 var progressBar = document.getElementById("progress"),
   loadBtn = document.getElementById("button"),
   display = document.getElementById("display");
+  
+var progressBar1 = document.getElementById("progress1"),
+loadBtn1 = document.getElementById("button1"),
+display1 = document.getElementById("display1");
 
 function upload(data) {
   var xhr = new XMLHttpRequest();
@@ -88,11 +92,13 @@ function upload(data) {
     xhr.upload.onloadstart = function(e) {
       progressBar.value = 0;
       display.innerText = '0%';
+      
     }
     xhr.upload.onloadend = function(e) {
       progressBar.value = e.loaded;
       loadBtn.disabled = false;
       loadBtn.innerHTML = 'Load Index';
+      
     }
   }
   xhr.send(data);
@@ -110,8 +116,7 @@ function buildFormData() {
 
 loadBtn.addEventListener("click", function(e) {
   this.disabled = true;
-  this.innerHTML = "Uploading...";
+  this.innerHTML = "Loading...";
   upload(buildFormData());
 });
-
 
