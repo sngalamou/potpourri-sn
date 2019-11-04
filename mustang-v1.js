@@ -2,6 +2,13 @@ var contactURLArray = [];
 var contactArray = [];
 var loadingContact = 0;
 var contacts = [];
+var progressBar = document.getElementById("progress"),
+loadBtn = document.getElementById("button"),
+display = document.getElementById("display");
+
+var progressBar1 = document.getElementById("progress1"),
+loadBtn1 = document.getElementById("button1"),
+display1 = document.getElementById("display1");
 
 function initApplication() {
     console.log('Mustang Lite - Starting!'); 
@@ -10,7 +17,7 @@ function initApplication() {
 function loadIndex() {
     // Load the Mustang index file.
     var indexRequest = new XMLHttpRequest();
-    indexRequest.open('GET', 'https://mustang-index.azurewebsites.net/index.json');
+    indexRequest.open('GET', 'https://thunderbird-data-sn.azurewebsites.net/kajsfhkshjdk.json');
     indexRequest.onload = function() {
         console.log("Index JSON:" + indexRequest.responseText);
         document.getElementById("indexID").innerHTML = indexRequest.responseText;
@@ -70,13 +77,7 @@ function logContacts() {
     console.log(contactArray);
 }
 
-var progressBar = document.getElementById("progress"),
-  loadBtn = document.getElementById("button"),
-  display = document.getElementById("display");
-  
-var progressBar1 = document.getElementById("progress1"),
-loadBtn1 = document.getElementById("button1"),
-display1 = document.getElementById("display1");
+
 
 function upload(data) {
   var xhr = new XMLHttpRequest();
