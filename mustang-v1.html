@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Simeon Ngalamou
+    Class:   Web & Distributed Programming 
+    Project: Mustang Lite
+    Description: This application is the first Version of Mustang.
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang Lite</title>
+        <link rel="stylesheet" href="mustang-v1.css">
+        <script src="mustang-v1.js"></script>
+    </head>
+    <body onload="initApplication()">  
+        <h1>Mustang V1</h1> 
+        <br>
+            <br>
+        <progress id="progress" value="0"></progress>
+        <button id="button" onclick="loadIndex()">Load Index</button>
+        <span id="display"></span>
+        Index:<p id="indexID"></p><br>
+        
+        <progress id="progress" value="0"></progress>
+        <button id="button" onclick="loadContacts()">Load Contacts</button>
+        <span id="display"></span>
+        Contacts:<p id="contactsID"></p><br>
+        
+
+        <progress id="progress" value="0"></progress>
+        <button id="button" onclick="logContacts()">Log Contacts to Console</button>
+        <span id="display"></span><br>
+    </body>
+</html>
