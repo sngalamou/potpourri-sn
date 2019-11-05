@@ -48,17 +48,6 @@ function loadNextContact(URL) {
     contactRequest = new XMLHttpRequest();
     contactRequest.open('GET', URL);
     contactRequest.onload = function() {
-        /* console.log(contactRequest.responseText);
-        var contact;
-        contact = JSON.parse(contactRequest.responseText);
-        console.log("Contact: " + contact.firstName);
-        contactArray.push(contact);
-        document.getElementById("contactsID").innerHTML = JSON.stringify(contactArray);
-
-        loadingContact++;
-        if (contactURLArray.length > loadingContact) {
-            loadNextContact(contactURLArray[loadingContact]);
-        } */
         for (i = 0; i < contactURLArray.length; i++) {
             console.log(contactRequest.responseText);
         var contact;
