@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<!--
+    Author:  Eric Pogue
+    Class:   Web & Distributed Programming 
+    Project: Mustang v2 Lite
+    Session: su18-cpsc-24700-lt1
+    Description: This application is intended to be a reference implementatin for Mustang V2.
+-->
+    <head>
+        <meta charset="UTF-8">
+        <title>Mustang v2 Lite</title>
+        <link rel="stylesheet" href="mustang-v2.css">
+        <script src="mustang-v2.js"></script>
+    </head>
+    <body onload="initApplication()">
+        <h1>Mustang v2.2 Lite</h1> 
+        <?php 
+        require_once 'process.php'; 
+        ?>
+        <div class="row justify-content-center">
+        <form action="process.php" method="POST">
+            <table>
+            <tr>
+                <td>Name:</td>
+                <td> 
+                    <div class="form-group">
+                    <input id="nameID" name="name" type="text" class="form-control" placeholder="Enter Your Name" value="" size="20"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><div class="form-group"> 
+                    <input id="emailID" name="email" type="text"  class="form-control" placeholder="Enter Your Email"  value="" size="20">
+                </td></div>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><div class="form-group"> 
+                    <input id="cityID" name="city" type="text"  class="form-control" placeholder="Enter Your City After Your Zip Code" value="" size="20">
+                </td></div>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><div class="form-group"> 
+                    <input id="stateID" name="state" type="text"  class="form-control" placeholder="Enter Your State After Your Zip Code" value="" size="20" onkeypress="keyPressed()">
+                </td></div>
+            </tr>
+            <tr>
+                <td>Zip</td>
+                <td><div class="form-group">
+                    <input id="zipID" name="zip" type="text"  class="form-control"  placeholder="Enter Your Before your State and City" value="" size="20" onfocus="zipFocusFunction()" onblur="zipBlurFunction()">
+                </td></div>
+            </tr>
+            <tr>
+                <td><button type="button" onclick="previous()">Previous</button></td>
+                <td><button type="button" autofocus onclick="next()">Next</button>
+                </td>
+            <tr>
+                <td><button type="button" onclick="add()">New</button></td>
+                <td><button type="button" onclick="remove()">Delete</button>
+            </td>
+            </tr>
+        </table><div class="form-group">
+        <button type="submit" class="btn-primary" name="save">Save</button></div>
+    </form>
+</div>
+
+        <p id="statusID"></p>
+        <br><br><hr>
+        Data and Test Functions:<br>
+        Index:<p id="indexID"></p>
+        Contacts:<p id="contactsID"></p>
+    </body>
+</html>
