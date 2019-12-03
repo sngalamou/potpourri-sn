@@ -53,6 +53,7 @@ xhr.setRequestHeader("x-rapidapi-host", "microsoft-azure-translation-v1.p.rapida
 xhr.setRequestHeader("x-rapidapi-key", "0d8ce3de65mshafcf99926226a2cp1f78e5jsn5f88341225c9");
 xhr.setRequestHeader("accept", "application/json");
 console.log(xhr.responseText);
+document.getElementById("wordID").innerHTML = xhr.responseText;
 
 xhr.send(data);
 
