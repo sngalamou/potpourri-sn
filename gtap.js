@@ -2,7 +2,7 @@ var word;
 var cors = "https://cors-anywhere.herokuapp.com/"
 function initApplication() {
     var indexRequest = new XMLHttpRequest();
-    indexRequest.open('GET', 'https://cors-anywhere.herokuapp.com/https://www.dictionary.com/e/word-of-the-day/');
+    indexRequest.open('GET', 'https://www.dictionary.com/e/word-of-the-day/');
     indexRequest.onload = function() {
         console.log("website" + indexRequest.responseText);
         document.getElementById("indexID").innerHTML = indexRequest.responseText;
@@ -48,7 +48,7 @@ xhr.addEventListener("readystatechange", function () {
 	}
 });
 
-xhr.open("GET", "https://microsoft-azure-translation-v1.p.rapidapi.com/translate?from=en&to=es&text=hello");
+xhr.open("GET", link);
 xhr.setRequestHeader("x-rapidapi-host", "microsoft-azure-translation-v1.p.rapidapi.com");
 xhr.setRequestHeader("x-rapidapi-key", "0d8ce3de65mshafcf99926226a2cp1f78e5jsn5f88341225c9");
 xhr.setRequestHeader("accept", "application/json");
