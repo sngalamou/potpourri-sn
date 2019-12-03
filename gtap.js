@@ -48,7 +48,7 @@ xhr.addEventListener("readystatechange", function () {
 	}
 });
 
-xhr.open("GET", link);
+xhr.open("GET", "https://microsoft-azure-translation-v1.p.rapidapi.com/translate?from=en&to=es&text=hello");
 xhr.setRequestHeader("x-rapidapi-host", "microsoft-azure-translation-v1.p.rapidapi.com");
 xhr.setRequestHeader("x-rapidapi-key", "0d8ce3de65mshafcf99926226a2cp1f78e5jsn5f88341225c9");
 xhr.setRequestHeader("accept", "application/json");
