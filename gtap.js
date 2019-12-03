@@ -35,7 +35,7 @@ indexRequest.open("GET", "https://www.linguee.com/english-french/search?source=a
 function loadIndex(word) {
     var link = "https://microsoft-azure-translation-v1.p.rapidapi.com/translate?from=en&to=es&text=";
     link += word;
-    link = "\"" + link + "\"";
+    //link = "\"" + link + "\"";
     console.log(link);
     var data = null;
 
