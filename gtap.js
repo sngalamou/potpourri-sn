@@ -1,6 +1,6 @@
 
 var word;
-var cors = "https://cors-anywhere.herokuapp.com/"
+var cors = "https://cors-anywhere.herokuapp.com/";
 function initApplication() {
     var link2 = cors + "https://www.dictionary.com/e/word-of-the-day/"
     var indexRequest = new XMLHttpRequest();
@@ -10,8 +10,8 @@ function initApplication() {
         document.getElementById("indexID").innerHTML = indexRequest.responseText;
         var res = (indexRequest.responseText).split(" ", 200);
         console.log(res[179]);
-        document.getElementById("indexID").innerHTML = res[179]
-        word = res[179]
+        document.getElementById("indexID").innerHTML = res[179];
+        word = res[179];
         loadIndex(word);
     }
     indexRequest.send();
